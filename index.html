@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>API System Interface</h1>
+    
+    <div class="api-form">
+      <label for="endpoint">API Endpoint:</label>
+      <input type="text" id="endpoint" placeholder="Enter API URL">
+      
+      <label for="method">HTTP Method:</label>
+      <select id="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      
+      <label for="payload">Request Payload (JSON):</label>
+      <textarea id="payload" placeholder="Enter JSON data"></textarea>
+      
+      <button id="sendRequest">Send Request</button>
+    </div>
+    
+    <div class="response">
+      <h2>Response</h2>
+      <pre id="responseOutput"></pre>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
