@@ -3,37 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API System</title>
+  <title>Google Sites API Integration</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>API System Interface</h1>
-    
-    <div class="api-form">
-      <label for="endpoint">API Endpoint:</label>
-      <input type="text" id="endpoint" placeholder="Enter API URL">
+    <h1>Google Sites API Interface</h1>
+
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+
+    <div class="api-form" style="display:none;" id="api_section">
+      <label for="siteName">Site Name:</label>
+      <input type="text" id="siteName" placeholder="Enter site name">
       
-      <label for="method">HTTP Method:</label>
-      <select id="method">
-        <option value="GET">GET</option>
-        <option value="POST">POST</option>
-        <option value="PUT">PUT</option>
-        <option value="DELETE">DELETE</option>
-      </select>
+      <label for="pageTitle">Page Title:</label>
+      <input type="text" id="pageTitle" placeholder="Enter page title">
       
-      <label for="payload">Request Payload (JSON):</label>
-      <textarea id="payload" placeholder="Enter JSON data"></textarea>
-      
-      <button id="sendRequest">Send Request</button>
+      <button id="createSite">Create Site</button>
     </div>
-    
+
     <div class="response">
       <h2>Response</h2>
       <pre id="responseOutput"></pre>
     </div>
   </div>
-  
+
+  <script src="https://apis.google.com/js/api.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
