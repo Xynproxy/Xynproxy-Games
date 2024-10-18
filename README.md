@@ -1,1 +1,1 @@
-Welcome to xynproxy page.
+Are API System hosting on github.
